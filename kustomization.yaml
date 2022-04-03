@@ -1,0 +1,8 @@
+bases:
+- deployment/blue
+- deployment/green
+- service/
+resources:
+    - ns.yaml
+    - ingresscontrol.yaml
+    - ingresscontrolstage.yaml
