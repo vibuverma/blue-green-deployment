@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hotel-green
-  namespace: hotel
+  name: sample-green
+  namespace: sample
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hotel
+      app: sample
       version: green
   template:
     metadata:
       labels:
-        app: hotel
+        app: sample
         version: green
   spec:
     containers:
-    - name: hotel
-      image: vipindevops/blue-green:tagname:1.1
+    - name: sample
+      image: vaibhavverma07/sample1:v2
       ports:
       - containerPort: 80
