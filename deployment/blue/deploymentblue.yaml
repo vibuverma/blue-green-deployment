@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-blue
+  namespace: sample
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sample
+      version: blue
+  template:
+    metadata:
+      labels:
+        app: sample
+        version: blue
+  spec:
+    containers:
+    - name: sample
+      image: docker pull vaibhavverma07/sample1:v1
+      ports:
+      - containerPort: 80

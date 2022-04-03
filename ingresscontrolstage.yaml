@@ -1,0 +1,13 @@
+kind: Ingress
+metadata:
+  name: sample-ingress-stage
+  namespace: sample
+spec:
+  rules:
+  - host: samplestage.example.com 
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: sample-svc-stage
+          servicePort: 80
