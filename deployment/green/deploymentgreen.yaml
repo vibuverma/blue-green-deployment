@@ -17,6 +17,6 @@ spec:
   spec:
     containers:
     - name: sample
-      image: vaibhavverma07/sample1:v2
+      image: vaibhavverma07/used-cars:v2
       ports:
       - containerPort: 80
