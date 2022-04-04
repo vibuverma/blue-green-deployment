@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: sample-ingress-stable
@@ -8,7 +8,9 @@ spec:
   - host: sample.example.com 
     http:
       paths:
-      - path: /
+      - pathType: ImplementationSpecific
         backend:
-          serviceName: sample-svc-stable
-          servicePort: 80
+          service:
+            name: test
+            port:
+              number: 80
